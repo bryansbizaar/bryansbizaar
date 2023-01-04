@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+}
+
+.img-container {
+  background: url(../pics/Header.jpg);
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.inner-container {
+  text-align: right;
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-family: "Shadows Into Light", cursive;
+  padding: 1rem 2rem;
+}
+
+.main-menu {
+  color: black;
+}
+
+.navbar {
+  padding-right: 5rem;
+}
+
+.nav-item {
+  list-style: none;
+  padding-bottom: 1rem;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+}
