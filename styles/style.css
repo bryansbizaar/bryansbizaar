@@ -2,16 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: 100%;
-}
-
-body {
-  width: 100%;
 }
 
 .img-container {
   background: url(../pics/Header.jpg);
-  height: 100%;
+  height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -25,15 +20,12 @@ body {
   height: auto;
 }
 
-h1 {
+.name {
+  color: black;
   font-size: 2.5em;
   font-family: "Shadows Into Light", cursive;
   padding: 1rem 2rem;
 }
-
-/* .main-menu {
-  color: black;
-} */
 
 .navbar {
   padding-right: 5rem;

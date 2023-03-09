@@ -5,40 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bryan Owens</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Shadows+Into+Light&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Akronim&family=Aref+Ruqaa+Ink:wght@700&family=Barriecito&family=Barrio&family=Bowlby+One&family=Bungee+Shade&family=Caveat+Brush&family=Eagle+Lake&family=Emilys+Candy&family=Fredericka+the+Great&family=Jacques+Francois+Shadow&family=Macondo&family=Monoton&family=Rubik+80s+Fade&family=Wallpoet&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <body>
-      <div class="img-container">
-        <div class="inner-container">
-          <h1 class="name">Bryan Owens</h1>
-          <header>
-            <nav class="navbar">
-              <ul class="nav-menu">
-                <li class="nav-item">
-                  <a href="about.html" class="nav-link">About</a>
-                </li>
-                <li class="nav-item"><a href="#" class="nav-link">Music</a></li>
-                <li class="nav-item">
-                  <a
-                    href="https://www.youtube.com/@BryansBizaar/playlists"
-                    target="_blank"
-                    class="nav-link"
-                    >Video</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Contact</a>
-                </li>
-              </ul>
-            </nav>
-          </header>
-        </div>
+    <header>
+      <div>
+        <h1 class="name">Bryan Owens</h1>
+        <h2 class="tag">multi-instrumental wizard</h2>
       </div>
-    </body>
+      <div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <nav>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+      </div>
+    </header>
+    <div class="index-img"></div>
   </body>
 </html>
