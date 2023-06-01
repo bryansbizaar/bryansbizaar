@@ -56,7 +56,7 @@ header {
 }
 
 .name-tag {
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
 }
 
 .nav-toggle:checked ~ nav {
@@ -156,8 +156,12 @@ nav a:hover {
   padding: 1rem;
 }
 
+.container {
+  margin: 2rem 1.5rem 3rem;
+}
+
 .text-container {
-  padding: 0 1.5rem 3rem;
+  /* padding: 0 1.5rem 3rem; */
   margin: 0 auto;
   max-width: 52rem;
 }
@@ -165,7 +169,7 @@ nav a:hover {
 .text {
   font-family: "Lora", serif;
   max-width: 50rem;
-  background: white;
+  background: rgb(226, 230, 230);
   border-radius: 0.5rem;
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.15);
   font-size: 1.2rem;
@@ -202,6 +206,10 @@ p {
     margin-left: 2rem;
     /* margin-left: 1rem; */
     /* margin: 0.25rem 0 0 4rem; */
+  }
+
+  .name-tag {
+    padding-bottom: 1rem;
   }
 
   .nav-toggle-label {
@@ -289,8 +297,9 @@ p {
 
   nav li {
     /* margin: 1rem; */
-    justify-self: left;
-    margin-left: 0.6rem;
+    /* justify-self: left;
+    margin-left: 0.6rem; */
+    margin: 0 1rem 0.5rem;
   }
 
   .img-about {
