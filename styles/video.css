@@ -28,8 +28,8 @@ header {
   background: rgb(226, 230, 230);
   border-radius: 0.5rem;
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.15);
-  margin: 1rem;
-  padding: 1rem;
+  margin: 2rem 1rem;
+  /* padding: 1rem; */
 }
 
 .description {
@@ -165,13 +165,12 @@ nav a:hover {
   font-weight: 700;
   font-family: "Macondo", cursive;
   text-align: center;
+  padding-top: 1rem;
 }
 
 .vidwrapper {
   width: 100%;
-  /* max-width: 50rem; */
   margin: 0 auto;
-  /* padding: 1rem; */
 }
 
 .vidcontainer {
@@ -225,13 +224,16 @@ nav a:hover {
     top: 100%;
   }
 
-  nav a,
-  .instrumentHeading {
+  nav a {
     font-size: 1.25rem;
   }
 
   nav li {
     margin: 1rem 1.5rem 1rem 0.75rem;
+  }
+
+  .instrumentHeading {
+    font-size: 1.5rem;
   }
 
   .vidwrapper {
@@ -282,5 +284,13 @@ nav a:hover {
     /* top: 10%; */
     /* transform: translateY(100%);
     z-index: -1; */
+  }
+
+  .instrumentHeading {
+    font-size: 2rem;
+  }
+
+  .container {
+    margin: 2rem;
   }
 }
