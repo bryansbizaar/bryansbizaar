@@ -47,16 +47,16 @@ header {
 }
 
 .tag {
-  font-size: 1rem;
+  font-size: 1.15rem;
   text-align: center;
-  padding-right: 2rem;
+  padding-right: 1.75rem;
   font-family: "Macondo", cursive;
   color: black;
   text-shadow: 0.05rem 0.07rem 0.05rem rgba(0, 0, 0, 0.2);
 }
 
 .name-tag {
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.5rem;
 }
 
 .nav-toggle:checked ~ nav {
@@ -214,7 +214,7 @@ p {
 
   .nav-toggle-label {
     margin-right: 4rem;
-    height: 120%;
+    height: 115%;
   }
 
   nav {

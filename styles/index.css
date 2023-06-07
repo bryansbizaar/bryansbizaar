@@ -37,11 +37,11 @@ header {
 }
 
 .tag {
-  font-size: 1rem;
+  font-size: 1.15rem;
   text-align: center;
   /* margin-left: 4.65rem; */
   /* justify-self: center; */
-  padding-right: 1rem;
+  padding-right: 1.75rem;
   font-family: "Macondo", cursive;
   color: rgb(255, 254, 208);
   text-shadow: 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.5);
