@@ -173,7 +173,7 @@ nav a {
   transition: opacity 250ms ease-in-out;
 }
 
-nav,
+nav a:hover,
 .band-name a:hover {
   color: rgb(128, 128, 128);
   cursor: pointer;
