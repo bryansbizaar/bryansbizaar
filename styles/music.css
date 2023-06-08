@@ -206,11 +206,6 @@ p {
   padding: 0 1rem;
 }
 
-.music-container {
-  /* padding: 1rem 1rem 0; */
-  /* margin: 2rem 1.5rem; */
-}
-
 @media screen and (min-width: 48rem) {
   .img-music {
     margin-top: calc(10vh);
