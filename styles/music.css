@@ -11,13 +11,14 @@ body {
 }
 
 header {
-  position: relative;
+  position: fixed;
   z-index: 999;
   width: 100%;
   background: rgb(197, 195, 195);
 }
 
 .img-music {
+  margin-top: calc(8.5vh);
   width: 100%;
   object-fit: cover;
 }
@@ -47,6 +48,11 @@ iframe {
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.15);
   /* margin: 1rem; */
   padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.groupcontainer {
+  margin: 1rem 1rem 3rem;
 }
 
 .description {
@@ -202,10 +208,14 @@ p {
 
 .music-container {
   /* padding: 1rem 1rem 0; */
-  margin: 2rem 1.5rem;
+  /* margin: 2rem 1.5rem; */
 }
 
 @media screen and (min-width: 48rem) {
+  .img-music {
+    margin-top: calc(10vh);
+  }
+
   .name-tag {
     display: flex;
     align-items: baseline;
@@ -222,6 +232,7 @@ p {
   .tag {
     font-size: 1.65rem;
     margin-left: 2rem;
+    padding: 0;
   }
 
   .name {

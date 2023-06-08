@@ -11,22 +11,27 @@ body {
 }
 
 header {
-  position: relative;
+  position: fixed;
   z-index: 999;
   width: 100%;
   background: rgb(197, 195, 195);
 }
 
 .img-video {
+  margin-top: calc(8.5vh);
   width: 100%;
   object-fit: cover;
+}
+
+.groupcontainer {
+  margin: 1rem 1rem 3rem;
 }
 
 .container {
   background: rgb(226, 230, 230);
   border-radius: 0.5rem;
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.15);
-  margin: 2rem 1rem;
+  margin-bottom: 2rem;
 }
 
 .description {
@@ -184,6 +189,10 @@ nav a:hover {
 }
 
 @media screen and (min-width: 48rem) {
+  .img-video {
+    margin-top: calc(10vh);
+  }
+
   .name-tag {
     display: flex;
     align-items: baseline;
@@ -200,6 +209,7 @@ nav a:hover {
   .tag {
     font-size: 1.65rem;
     margin-left: 2rem;
+    padding: 0;
   }
 
   .name {
@@ -277,9 +287,9 @@ nav a:hover {
     margin: 0 1rem 0.5rem;
   }
 
-  .img-video {
+  /* .img-video {
     margin-top: calc(10vh);
-  }
+  } */
 
   .instrumentHeading {
     font-size: 2rem;
@@ -287,5 +297,10 @@ nav a:hover {
 
   .container {
     margin: 3rem;
+  }
+
+  .groupcontainer {
+    margin: 0 auto;
+    max-width: 65rem;
   }
 }

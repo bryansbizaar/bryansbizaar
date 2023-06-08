@@ -11,13 +11,14 @@ body {
 }
 
 header {
-  position: relative;
+  position: fixed;
   z-index: 999;
   width: 100%;
   background: rgb(197, 195, 195);
 }
 
 .img-about {
+  margin-top: calc(8.5vh);
   width: 100%;
   object-fit: cover;
 }
@@ -174,6 +175,10 @@ p {
 }
 
 @media screen and (min-width: 48rem) {
+  .img-about {
+    margin-top: calc(10vh);
+  }
+
   .name-tag {
     display: flex;
     align-items: baseline;
@@ -190,6 +195,7 @@ p {
   .tag {
     font-size: 1.65rem;
     margin-left: 2rem;
+    padding: 0;
   }
 
   .name {
@@ -212,6 +218,10 @@ p {
 
   nav li {
     margin: 1rem 1.5rem 1rem 0.75rem;
+  }
+
+  .container {
+    margin: 2rem 3rem 3rem;
   }
 }
 
