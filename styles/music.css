@@ -45,8 +45,8 @@ iframe {
   background: rgb(226, 230, 230);
   border-radius: 0.5rem;
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.15);
-  margin: 1rem;
-  padding: 1rem;
+  /* margin: 1rem; */
+  padding-bottom: 1rem;
 }
 
 .description {
@@ -74,7 +74,7 @@ iframe {
 .tag {
   font-size: 1rem;
   text-align: center;
-  padding-right: 1.5rem;
+  padding-right: 1rem;
   font-family: "Macondo", cursive;
   color: black;
   text-shadow: 0.05rem 0.07rem 0.05rem rgba(0, 0, 0, 0.2);
@@ -201,7 +201,8 @@ p {
 }
 
 .music-container {
-  padding: 1rem 1rem 0;
+  /* padding: 1rem 1rem 0; */
+  margin: 2rem 1.5rem;
 }
 
 @media screen and (min-width: 48rem) {
@@ -209,6 +210,7 @@ p {
     display: flex;
     align-items: baseline;
     margin-left: 2.5rem;
+    padding: 0;
   }
 
   .name {
@@ -222,7 +224,7 @@ p {
     margin-left: 2rem;
   }
 
-  .name-tag {
+  .name {
     padding-bottom: 1rem;
   }
 
@@ -278,6 +280,10 @@ p {
   header {
     position: fixed;
     box-shadow: 0 0.15rem 0.5rem rgba(0, 0, 0, 0.15);
+  }
+
+  .name {
+    padding-bottom: 0.5rem;
   }
 
   .name-tag {
