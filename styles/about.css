@@ -18,10 +18,8 @@ header {
 }
 
 .img-about {
-  /* height: 75vh; */
   width: 100%;
   object-fit: cover;
-  /* margin-top: 5rem; */
 }
 
 .name {
@@ -29,13 +27,8 @@ header {
   text-shadow: 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.5);
   padding-right: 5rem;
   padding: 0.5rem 5rem 0 0;
-  font-size: 2.5rem;
-  /* color: black; */
-  /* color: rgb(255, 254, 254); */
-  /* font-family: "Bungee Shade", cursive; */
-  /* font-family: "Wallpoet", cursive; */
+  font-size: 2rem;
   font-family: "Macondo", cursive;
-  /* font-family: "Monoton", cursive; */
 }
 
 .name a {
@@ -47,9 +40,9 @@ header {
 }
 
 .tag {
-  font-size: 1.15rem;
+  font-size: 1rem;
   text-align: center;
-  padding-right: 1.75rem;
+  padding-right: 1.5rem;
   font-family: "Macondo", cursive;
   color: black;
   text-shadow: 0.05rem 0.07rem 0.05rem rgba(0, 0, 0, 0.2);
@@ -147,21 +140,20 @@ nav a:hover {
   cursor: pointer;
 }
 
+/* Maybe use at later point: 
 .bio {
-  /* font-family: "Fjalla One", sans-serif; */
   font-family: "Instrument Serif", serif;
   font-weight: 700;
   color: black;
   text-align: center;
   padding: 1rem;
-}
+} */
 
 .container {
   margin: 2rem 1.5rem 3rem;
 }
 
 .text-container {
-  /* padding: 0 1.5rem 3rem; */
   margin: 0 auto;
   max-width: 52rem;
 }
@@ -182,30 +174,21 @@ p {
 }
 
 @media screen and (min-width: 48rem) {
-  /* header {
-      display: flex;
-      justify-content: center;
-      align-items: baseline;
-    } */
-
   .name-tag {
     display: flex;
-    /* justify-content: center; */
     align-items: baseline;
     margin-left: 2.5rem;
   }
 
   .name {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin: 1rem 0 0;
     padding: 0;
   }
 
   .tag {
-    font-size: 2rem;
+    font-size: 1.65rem;
     margin-left: 2rem;
-    /* margin-left: 1rem; */
-    /* margin: 0.25rem 0 0 4rem; */
   }
 
   .name-tag {
@@ -214,11 +197,10 @@ p {
 
   .nav-toggle-label {
     margin-right: 4rem;
-    height: 115%;
+    height: 108%;
   }
 
   nav {
-    /* margin-right: 1.5rem; */
     margin: 0;
     top: 100%;
   }
@@ -230,46 +212,17 @@ p {
   nav li {
     margin: 1rem 1.5rem 1rem 0.75rem;
   }
-
-  /* header {
-    padding-bottom: 0.5rem;
-  } */
 }
 
 @media screen and (min-width: 52rem) {
   header {
     position: fixed;
     box-shadow: 0 0.15rem 0.5rem rgba(0, 0, 0, 0.15);
-    /* display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: baseline; */
-    /* display: grid; */
   }
 
   .name-tag {
-    /* display: grid;
-      grid-template-columns: 1fr 1fr;
-      margin: 0; */
     display: flex;
     justify-content: center;
-  }
-
-  .name {
-    /* flex: 1;
-      margin: 0 1rem;
-      padding-right: 0; */
-    /* margin: 0.5rem; */
-    /* margin: 0.5rem 0 0.5rem 4rem; */
-  }
-
-  .tag {
-    /* flex: 0 0 auto;
-      margin-left: 0;
-      margin-top: 1rem; */
-    /* margin: 0; */
-    /* align-self: center; */
-    /* margin: 1rem 0 0; */
   }
 
   .nav-toggle-label {
@@ -290,15 +243,9 @@ p {
   nav ul {
     display: flex;
     justify-content: center;
-    /* margin-top: 1.5rem; */
-    /* display: grid;
-      grid-template-columns: repeat(5, 1fr); */
   }
 
   nav li {
-    /* margin: 1rem; */
-    /* justify-self: left;
-    margin-left: 0.6rem; */
     margin: 0 1rem 0.5rem;
   }
 
