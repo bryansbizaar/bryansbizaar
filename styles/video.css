@@ -54,7 +54,7 @@ header {
 .tag {
   font-size: 1rem;
   text-align: center;
-  padding-right: 1.5rem;
+  padding-right: 1rem;
   font-family: "Macondo", cursive;
   color: black;
   text-shadow: 0.05rem 0.07rem 0.05rem rgba(0, 0, 0, 0.2);
@@ -188,6 +188,7 @@ nav a:hover {
     display: flex;
     align-items: baseline;
     margin-left: 2.5rem;
+    padding: 0;
   }
 
   .name {
@@ -201,7 +202,7 @@ nav a:hover {
     margin-left: 2rem;
   }
 
-  .name-tag {
+  .name {
     padding-bottom: 1rem;
   }
 
@@ -241,6 +242,10 @@ nav a:hover {
   header {
     position: fixed;
     box-shadow: 0 0.15rem 0.5rem rgba(0, 0, 0, 0.15);
+  }
+
+  .name {
+    padding-bottom: 0.5rem;
   }
 
   .name-tag {
