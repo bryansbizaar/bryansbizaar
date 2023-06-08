@@ -18,7 +18,7 @@ header {
 }
 
 .img-music {
-  margin-top: calc(8.5vh);
+  margin-top: calc(15vh);
   width: 100%;
   object-fit: cover;
 }
