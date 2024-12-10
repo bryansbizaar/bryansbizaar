@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="./styles/carousel.css" />
+  </head>
+  <body>
+    <header>
+      <div class="name-tag">
+        <h1 class="name">Bryan Owens</h1>
+        <h2 class="tag">Multi-instrumentalist</h2>
+      </div>
+      <div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <nav>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li>
+              <a href="https://www.facebook.com/bryansbizaar" target="_blank"
+                ><img
+                  src="../pics/facebook.png"
+                  alt="facebook logo"
+                  width="17"
+                  height="17"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/@BryansBizaar/playlists"
+                target="_blank"
+                ><img
+                  src="../pics/youtube.png"
+                  alt="youtube logo"
+                  width="16"
+                  height="16"
+              /></a>
+            </li>
+            <!-- <li><a href="merch.html">Merch</a></li>
+            <li><a href="contact.html">Contact</a></li> -->
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+      </div>
+    </header>
+
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <img src="pics/holocene.jpg" alt="Image 1" />
+      </div>
+      <div class="carousel-slide">
+        <img src="pics/wedding.jpg" alt="Image 2" />
+      </div>
+      <div class="carousel-slide">
+        <img src="pics/wedding3.jpg" alt="Image 3" />
+      </div>
+      <div class="carousel-slide">
+        <img src="pics/roseland.jpg" alt="Image 4" />
+      </div>
+      <div class="carousel-slide">
+        <img src="pics/fiddle1.jpg" alt="Image 5" />
+      </div>
+
+      <div class="carousel-slide">
+        <img src="pics/shift.jpg" alt="Image 6" />
+      </div>
+
+      <div class="carousel-slide">
+        <img src="pics/aunt-thelmas.jpg" alt="Image 7" />
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".carousel-slide");
+        let currentSlide = 0;
+        const slideInterval = 9500; // Adjusted for longer fade-in (5s display + 4.5s fade)
+
+        // Show first slide initially
+        slides[0].classList.add("active");
+
+        function nextSlide() {
+          // Remove active class from current slide and add prev class
+          slides[currentSlide].classList.remove("active");
+          slides[currentSlide].classList.add("prev");
+
+          // Calculate next slide index
+          currentSlide = (currentSlide + 1) % slides.length;
+
+          // Add active class to next slide
+          slides[currentSlide].classList.add("active");
+
+          // Clean up prev class after transition
+          setTimeout(() => {
+            slides.forEach((slide) => {
+              if (slide !== slides[currentSlide]) {
+                slide.classList.remove("prev");
+              }
+            });
+          }, 2000);
+        }
+
+        // Start the carousel
+        setInterval(nextSlide, slideInterval);
+      });
+    </script>
+  </body>
+</html>
