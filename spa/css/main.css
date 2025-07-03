@@ -11,12 +11,12 @@
   --text-shadow-dark: rgba(0, 0, 0, 0.2);
   --link-hover: rgb(87, 88, 88);
   --nav-hover: rgb(128, 128, 128);
-  
+
   /* Typography */
   --font-heading: "Macondo", cursive;
   --font-body: "Lora", serif;
   --font-alt: "Instrument Serif", serif;
-  
+
   /* Spacing */
   --header-height: calc(10vh);
   --container-max-width: 52rem;
@@ -24,7 +24,7 @@
   --border-radius-small: 0.35rem;
   --shadow-standard: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.15);
   --shadow-nav: 0 1rem 1rem rgba(0, 0, 0, 0.75);
-  
+
   /* Transitions */
   --transition-fast: 250ms ease-in-out;
   --transition-medium: 400ms ease-in-out;
@@ -191,6 +191,15 @@ nav a {
 }
 
 nav a:hover {
+  color: rgb(207, 211, 211);
+}
+
+/* Navigation styling for non-home sections */
+body.show-header-bg nav a {
+  color: white;
+}
+
+body.show-header-bg nav a:hover {
   color: var(--nav-hover);
 }
 
@@ -259,7 +268,8 @@ p {
   height: 100%;
   opacity: 0;
   transform: translateX(100%);
-  transition: transform var(--transition-carousel), opacity var(--transition-carousel);
+  transition: transform var(--transition-carousel),
+    opacity var(--transition-carousel);
 }
 
 .carousel-slide.active {
@@ -500,6 +510,12 @@ iframe {
 
   nav a {
     opacity: 1;
+    color: white;
+    text-shadow: 2px 2px black;
+  }
+
+  /* Desktop navigation for non-home sections */
+  body.show-header-bg nav a {
     color: var(--text-primary);
     text-shadow: 0.05rem 0.07rem 0.05rem var(--text-shadow-dark);
   }
@@ -547,7 +563,6 @@ iframe {
     max-width: 65rem;
   }
 }
-
 
 /* Home Section Specific Styles */
 .index-img {
