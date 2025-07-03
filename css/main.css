@@ -567,11 +567,17 @@ iframe {
 /* Home Section Specific Styles */
 .index-img {
   height: 100vh;
-  background-image: url(../../pics/index-img.jpg);
+  /* background-image: url(../../pics/index-img.jpg); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  opacity: 0; /* Start invisible */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.index-img.loaded {
+  opacity: 1; /* Fade in when loaded */
 }
 
 #home {
