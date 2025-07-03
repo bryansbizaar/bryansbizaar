@@ -15,12 +15,7 @@ header {
   z-index: 999;
   width: 100%;
   background: rgb(197, 195, 195);
-}
-
-.img-about {
-  margin-top: calc(15vh);
-  width: 100%;
-  object-fit: cover;
+  top: 0;
 }
 
 .name {
@@ -151,12 +146,14 @@ nav a:hover {
 } */
 
 .container {
-  margin: 2rem 1.5rem 3rem;
+  width: 100%;
+  max-width: 52rem;
+  margin: 2rem auto 3rem;
+  padding: 0 1.5rem;
 }
 
 .text-container {
-  margin: 0 auto;
-  max-width: 52rem;
+  width: 100%;
 }
 
 .text {
@@ -218,10 +215,6 @@ p {
 
   nav li {
     margin: 1rem 1.5rem 1rem 0.75rem;
-  }
-
-  .container {
-    margin: 2rem 3rem 3rem;
   }
 }
 
