@@ -354,6 +354,7 @@ iframe {
   background: var(--text-bg);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-standard);
+  margin-bottom: 2rem;
 }
 
 .instrumentHeading {
@@ -553,16 +554,12 @@ iframe {
     font-size: 2rem;
   }
 
-  .groupcontainer {
-    margin: 0 auto;
-    max-width: 65rem;
-    width: 100%;
-    display: block;
+  #video .container {
+    margin: 3rem;
   }
 
-  /* Video section container centering to match music section */
-  #video .container {
-    margin: 3rem auto;
+  #video .groupcontainer {
+    margin: 0 auto;
     max-width: 65rem;
   }
 }
