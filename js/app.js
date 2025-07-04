@@ -1,3 +1,31 @@
+// IMMEDIATE IMAGE LOADING - Start loading hero image immediately
+(function () {
+  const img = new Image();
+  img.onload = function () {
+    // Store that image is ready
+    window.heroImageReady = img;
+
+    // Apply immediately if DOM element exists
+    const heroImage = document.querySelector(".index-img");
+    if (heroImage) {
+      heroImage.style.backgroundImage = "url(../pics/index-img.jpg)";
+      heroImage.classList.add("loaded");
+    }
+  };
+
+  img.onerror = function () {
+    // Store that we tried to load but failed
+    window.heroImageFailed = true;
+    const heroImage = document.querySelector(".index-img");
+    if (heroImage) {
+      heroImage.classList.add("loaded");
+    }
+  };
+
+  // Start loading immediately when script runs
+  img.src = "../pics/index-img.jpg";
+})();
+
 // Main Application JavaScript
 class BryanOwensApp {
   constructor() {
@@ -18,22 +46,32 @@ class BryanOwensApp {
     const heroImage = document.querySelector(".index-img");
     if (!heroImage) return;
 
-    // Create image for preloading
+    // Check if image already loaded from top of file
+    if (window.heroImageReady) {
+      heroImage.style.backgroundImage = "url(../pics/index-img.jpg)";
+      heroImage.classList.add("loaded");
+      return;
+    }
+
+    // Check if image failed to load
+    if (window.heroImageFailed) {
+      heroImage.classList.add("loaded");
+      return;
+    }
+
+    // Fallback - if somehow the top script didn't work, try again
     const img = new Image();
 
     img.onload = function () {
-      // Set background image after it's loaded
       heroImage.style.backgroundImage = "url(../pics/index-img.jpg)";
       heroImage.classList.add("loaded");
     };
 
     img.onerror = function () {
-      // Fallback if image fails - just show the background color
       heroImage.classList.add("loaded");
       console.log("Background image failed to load, using fallback");
     };
 
-    // Start loading the image
     img.src = "../pics/index-img.jpg";
   }
 
