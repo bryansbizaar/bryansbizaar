@@ -1,31 +1,3 @@
-// IMMEDIATE IMAGE LOADING - Start loading hero image immediately
-(function () {
-  const img = new Image();
-  img.onload = function () {
-    // Store that image is ready
-    window.heroImageReady = img;
-
-    // Apply immediately if DOM element exists
-    const heroImage = document.querySelector(".index-img");
-    if (heroImage) {
-      heroImage.style.backgroundImage = "url(../pics/index-img.jpg)";
-      heroImage.classList.add("loaded");
-    }
-  };
-
-  img.onerror = function () {
-    // Store that we tried to load but failed
-    window.heroImageFailed = true;
-    const heroImage = document.querySelector(".index-img");
-    if (heroImage) {
-      heroImage.classList.add("loaded");
-    }
-  };
-
-  // Start loading immediately when script runs
-  img.src = "../pics/index-img.jpg";
-})();
-
 // Main Application JavaScript
 class BryanOwensApp {
   constructor() {
@@ -39,40 +11,6 @@ class BryanOwensApp {
     this.setupCarousels();
     this.handleInitialRoute();
     this.setupMobileNav();
-    this.setupImageLoading();
-  }
-
-  setupImageLoading() {
-    const heroImage = document.querySelector(".index-img");
-    if (!heroImage) return;
-
-    // Check if image already loaded from top of file
-    if (window.heroImageReady) {
-      heroImage.style.backgroundImage = "url(../pics/index-img.jpg)";
-      heroImage.classList.add("loaded");
-      return;
-    }
-
-    // Check if image failed to load
-    if (window.heroImageFailed) {
-      heroImage.classList.add("loaded");
-      return;
-    }
-
-    // Fallback - if somehow the top script didn't work, try again
-    const img = new Image();
-
-    img.onload = function () {
-      heroImage.style.backgroundImage = "url(../pics/index-img.jpg)";
-      heroImage.classList.add("loaded");
-    };
-
-    img.onerror = function () {
-      heroImage.classList.add("loaded");
-      console.log("Background image failed to load, using fallback");
-    };
-
-    img.src = "../pics/index-img.jpg";
   }
 
   // Navigation System
@@ -104,6 +42,11 @@ class BryanOwensApp {
   }
 
   showSection(section, updateCarousel = true) {
+    // Stop all currently running carousels
+    this.carouselInstances.forEach((carousel) => {
+      carousel.stop();
+    });
+
     // Hide all sections
     const sections = document.querySelectorAll(".page-section");
     sections.forEach((s) => s.classList.remove("active"));
@@ -120,9 +63,11 @@ class BryanOwensApp {
       // Update active nav link
       this.updateActiveNavLink(section);
 
-      // Start carousel for this section if needed
+      // Reset and start carousel for this section if needed
       if (updateCarousel && this.carouselInstances.has(section)) {
-        this.carouselInstances.get(section).start();
+        const carousel = this.carouselInstances.get(section);
+        carousel.reset(); // Reset to first slide
+        carousel.start(); // Start the carousel
       }
     }
   }
@@ -149,7 +94,7 @@ class BryanOwensApp {
 
   handleInitialRoute() {
     const hash = window.location.hash.substring(1);
-    const section = hash || "home";
+    const section = hash || "about";
     this.showSection(section);
   }
 
@@ -184,7 +129,9 @@ class BryanOwensApp {
 
     // Start carousel for initial section if it has one
     if (this.carouselInstances.has(this.currentSection)) {
-      this.carouselInstances.get(this.currentSection).start();
+      const carousel = this.carouselInstances.get(this.currentSection);
+      carousel.reset();
+      carousel.start();
     }
   }
 }
@@ -206,13 +153,28 @@ class ImageCarousel {
   }
 
   init() {
-    // Show first slide initially
+    // Reset all slides to initial state
+    this.reset();
+    // Preload images for better performance
+    this.preloadImages();
+  }
+
+  reset() {
+    // Stop any running carousel
+    this.stop();
+
+    // Reset current slide to 0
+    this.currentSlide = 0;
+
+    // Remove all classes from all slides
+    this.slides.forEach((slide) => {
+      slide.classList.remove("active", "prev");
+    });
+
+    // Show first slide if it exists
     if (this.slides[0]) {
       this.slides[0].classList.add("active");
     }
-
-    // Preload images for better performance
-    this.preloadImages();
   }
 
   start() {
