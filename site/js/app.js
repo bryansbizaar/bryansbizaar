@@ -103,9 +103,15 @@ class BryanOwensApp {
     const navToggle = document.getElementById("nav-toggle");
     const navToggleLabel = document.querySelector(".nav-toggle-label");
 
-    if (navToggleLabel) {
-      navToggleLabel.addEventListener("click", () => {
+    if (navToggleLabel && navToggle) {
+      navToggleLabel.addEventListener("click", (e) => {
+        e.preventDefault();
         navToggle.checked = !navToggle.checked;
+      });
+    } else {
+      console.error('Mobile nav elements not found:', {
+        navToggle: !!navToggle,
+        navToggleLabel: !!navToggleLabel
       });
     }
   }

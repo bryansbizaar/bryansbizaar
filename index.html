@@ -148,10 +148,11 @@
         transition: transform 400ms ease-in-out;
         right: 0;
         top: 100%;
-        background-color: rgba(255, 255, 255, 0.03);
+        background-color: rgba(255, 255, 255, 0.08);
         backdrop-filter: blur(0.25rem);
         border-radius: 0.25rem;
-        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.75);
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.25);
+        z-index: 1000;
       }
 
       .nav-toggle:checked ~ nav {
@@ -173,7 +174,7 @@
         font-weight: 700;
         font-family: var(--font-heading);
         text-transform: uppercase;
-        text-shadow: 2px 2px black;
+        text-shadow: 0.1rem 0.08rem 0.15rem var(--text-shadow-light);
         cursor: pointer;
         opacity: 0;
         transition: opacity var(--transition-fast);
@@ -241,7 +242,6 @@
         nav a {
           opacity: 1;
           color: white;
-          text-shadow: 2px 2px black;
         }
 
         nav ul {
@@ -304,13 +304,20 @@
     <div class="index-img"></div>
 
     <script>
-      // Simple mobile nav toggle
-      document
-        .querySelector(".nav-toggle-label")
-        .addEventListener("click", function () {
-          const navToggle = document.getElementById("nav-toggle");
-          navToggle.checked = !navToggle.checked;
-        });
+      // Ensure DOM is loaded before adding event listeners
+      document.addEventListener("DOMContentLoaded", function () {
+        const navToggleLabel = document.querySelector(".nav-toggle-label");
+        const navToggle = document.getElementById("nav-toggle");
+
+        if (navToggleLabel && navToggle) {
+          navToggleLabel.addEventListener("click", function (e) {
+            e.preventDefault();
+            navToggle.checked = !navToggle.checked;
+          });
+        } else {
+          console.error("Navigation elements not found");
+        }
+      });
     </script>
   </body>
 </html>

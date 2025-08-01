@@ -9,8 +9,8 @@
   --text-light: rgb(255, 254, 208);
   --text-shadow-light: rgba(0, 0, 0, 0.5);
   --text-shadow-dark: rgba(0, 0, 0, 0.2);
-  --link-hover: rgb(87, 88, 88);
-  --nav-hover: rgb(128, 128, 128);
+  --link-hover: rgb(239, 241, 241);
+  --nav-hover: rgb(186, 186, 186);
 
   /* Typography */
   --font-heading: "Macondo", cursive;
@@ -183,10 +183,12 @@ nav {
   transform-origin: top;
   transition: transform var(--transition-medium);
   right: 0;
-  background-color: rgba(255, 255, 255, 0.03);
+  top: 100%;
+  background-color: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(0.25rem);
   border-radius: 0.25rem;
   box-shadow: var(--shadow-nav);
+  z-index: 1000;
 }
 
 nav li {
@@ -199,7 +201,7 @@ nav a {
   font-weight: 700;
   font-family: var(--font-heading);
   text-transform: uppercase;
-  text-shadow: 2px 2px black;
+  text-shadow: 0.15rem 0.15rem 0.15rem var(--text-shadow-light);
   cursor: pointer;
   opacity: 0;
   transition: opacity var(--transition-fast);
@@ -433,7 +435,7 @@ iframe {
   }
 
   .nav-toggle-label {
-    margin-right: 4rem;
+    margin-right: 2rem;
     height: 108%;
   }
 
@@ -526,7 +528,7 @@ iframe {
   nav a {
     opacity: 1;
     color: white;
-    text-shadow: 2px 2px black;
+    text-shadow: 0.15rem 0.15rem 0.15rem var(--text-shadow-light);
   }
 
   /* Desktop navigation for non-home sections */
