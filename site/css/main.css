@@ -9,8 +9,8 @@
   --text-light: rgb(255, 254, 208);
   --text-shadow-light: rgba(0, 0, 0, 0.5);
   --text-shadow-dark: rgba(0, 0, 0, 0.2);
-  --link-hover: rgb(239, 241, 241);
-  --nav-hover: rgb(186, 186, 186);
+  /* --link-hover: rgb(239, 241, 241); */
+  --nav-hover: rgb(156, 156, 156);
 
   /* Typography */
   --font-heading: "Macondo", cursive;
@@ -80,7 +80,7 @@ body.show-header-bg header {
 
 .name {
   text-align: center;
-  /* text-shadow: 0 0.03rem 0.2rem var(--text-shadow-light); */
+  text-shadow: 0 0.03rem 0.2rem var(--text-shadow-light);
   margin: 0.4rem 1rem 0;
   padding-right: 5rem;
   font-size: 2rem;
@@ -99,7 +99,8 @@ body.show-header-bg .name {
 }
 
 .name a:hover {
-  color: var(--link-hover);
+  /* color: var(--link-hover); */
+  color: var(--nav-hover);
 }
 
 .tag {
