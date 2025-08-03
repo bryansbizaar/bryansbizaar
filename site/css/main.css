@@ -7,7 +7,7 @@
   --dark-bg: rgb(37, 40, 46);
   --text-primary: black;
   --text-light: rgb(255, 254, 208);
-  --text-shadow-light: rgba(0, 0, 0, 0.5);
+  --text-shadow-light: rgba(100, 100, 100, 0.5);
   --text-shadow-dark: rgba(0, 0, 0, 0.2);
 
   /* Typography */
@@ -63,7 +63,8 @@ body.show-header-bg header {
 
 .name {
   text-align: center;
-  text-shadow: 0 0.03rem 0.2rem var(--text-shadow-light);
+  /* text-shadow: 0 0.03rem 0.2rem var(--text-shadow-light); */
+  text-shadow: 0.06rem 0.02rem 0.05rem var(--text-shadow-light);
   margin: 0.4rem 1rem 0;
   padding-right: 5rem;
   font-size: 2rem;
@@ -184,7 +185,8 @@ nav a {
   font-weight: 700;
   font-family: var(--font-heading);
   text-transform: uppercase;
-  text-shadow: 0.5px 0.5px black;
+  /* text-shadow: 0.5px 0.5px black; */
+  text-shadow: 0.8px 1px black;
   cursor: pointer;
   opacity: 0;
   transition: opacity var(--transition-fast);
