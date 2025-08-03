@@ -81,14 +81,23 @@ class BryanOwensApp {
     }
   }
 
+  // updateActiveNavLink(section) {
+  //   const navLinks = document.querySelectorAll("nav a[data-section]");
+  //   navLinks.forEach((link) => {
+  //     if (link.getAttribute("data-section") === section) {
+  //       link.style.color = "";
+  //     } else {
+  //       link.style.color = "";
+  //     }
+  //   });
+  // }
+
   updateActiveNavLink(section) {
+    // Simply remove all inline styles and let CSS handle everything
     const navLinks = document.querySelectorAll("nav a[data-section]");
     navLinks.forEach((link) => {
-      if (link.getAttribute("data-section") === section) {
-        link.style.color = "var(--link-hover)";
-      } else {
-        link.style.color = "";
-      }
+      // Remove any inline styles completely
+      link.removeAttribute("style");
     });
   }
 
@@ -109,9 +118,9 @@ class BryanOwensApp {
         navToggle.checked = !navToggle.checked;
       });
     } else {
-      console.error('Mobile nav elements not found:', {
+      console.error("Mobile nav elements not found:", {
         navToggle: !!navToggle,
-        navToggleLabel: !!navToggleLabel
+        navToggleLabel: !!navToggleLabel,
       });
     }
   }
