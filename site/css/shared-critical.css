@@ -178,7 +178,7 @@ nav a:hover {
 /* Critical responsive styles */
 @media screen and (min-width: 48rem) {
   .carousel-slide img {
-    margin-top: calc(10vh);
+    margin-top: calc(8.5vh);
   }
   .name-tag {
     display: flex;
@@ -220,6 +220,10 @@ nav a:hover {
 }
 
 @media screen and (min-width: 52rem) {
+  .carousel-slide img {
+    margin-top: calc(10vh);
+  }
+
   .name {
     padding-bottom: 0.5rem;
   }
