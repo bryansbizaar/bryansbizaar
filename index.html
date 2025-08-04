@@ -37,7 +37,7 @@
     />
 
     <style>
-      /* Critical CSS for instant loading */
+      /* Critical CSS for instant loading - your exact original styles */
       * {
         margin: 0;
         padding: 0;
@@ -148,7 +148,10 @@
         transition: transform 400ms ease-in-out;
         right: 0;
         top: 100%;
-        z-index: 1000;
+        /* background-color: rgba(255, 255, 255, 0.03); */
+        backdrop-filter: blur(0.25rem);
+        border-radius: 0.25rem;
+        /* box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.75); */
       }
 
       .nav-toggle:checked ~ nav {
@@ -170,7 +173,8 @@
         font-weight: 700;
         font-family: var(--font-heading);
         text-transform: uppercase;
-        text-shadow: 0.1rem 0.08rem 0.15rem var(--text-shadow-light);
+        /* text-shadow: 2px 2px black; */
+        text-shadow: 0.1rem 0.08rem 0.15rem 2.4px var(--text-shadow-light);
         cursor: pointer;
         opacity: 0;
         transition: opacity var(--transition-fast);
@@ -199,13 +203,12 @@
 
         .tag {
           font-size: 1.65rem;
-          /* margin-left: 2rem; */
-          margin: 0 2rem;
+          margin-left: 2rem;
+          padding: 0;
         }
 
         .nav-toggle-label {
-          /* margin-right: 2rem; */
-          margin: 0 2rem;
+          margin-left: 2rem;
           height: 108%;
         }
 
@@ -239,6 +242,7 @@
         nav a {
           opacity: 1;
           color: white;
+          text-shadow: 2px 2px black;
         }
 
         nav ul {
@@ -262,9 +266,9 @@
         <input type="checkbox" id="nav-toggle" class="nav-toggle" />
         <nav>
           <ul>
-            <li><a href="site/">About</a></li>
-            <li><a href="site/#music">Music</a></li>
-            <li><a href="site/#video">Video</a></li>
+            <li><a href="site/about.html">About</a></li>
+            <li><a href="site/music.html">Music</a></li>
+            <li><a href="site/video.html">Video</a></li>
             <li>
               <a href="https://www.facebook.com/bryansbizaar" target="_blank">
                 <img
@@ -301,20 +305,14 @@
     <div class="index-img"></div>
 
     <script>
-      // Ensure DOM is loaded before adding event listeners
-      document.addEventListener("DOMContentLoaded", function () {
-        const navToggleLabel = document.querySelector(".nav-toggle-label");
-        const navToggle = document.getElementById("nav-toggle");
-
-        if (navToggleLabel && navToggle) {
-          navToggleLabel.addEventListener("click", function (e) {
-            e.preventDefault();
-            navToggle.checked = !navToggle.checked;
-          });
-        } else {
-          console.error("Navigation elements not found");
-        }
-      });
+      // Minimal mobile nav toggle - CSS handles everything else
+      document
+        .querySelector(".nav-toggle-label")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          const navToggle = document.getElementById("nav-toggle");
+          navToggle.checked = !navToggle.checked;
+        });
     </script>
   </body>
 </html>

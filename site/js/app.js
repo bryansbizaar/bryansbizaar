@@ -81,17 +81,6 @@ class BryanOwensApp {
     }
   }
 
-  // updateActiveNavLink(section) {
-  //   const navLinks = document.querySelectorAll("nav a[data-section]");
-  //   navLinks.forEach((link) => {
-  //     if (link.getAttribute("data-section") === section) {
-  //       link.style.color = "";
-  //     } else {
-  //       link.style.color = "";
-  //     }
-  //   });
-  // }
-
   updateActiveNavLink(section) {
     // Simply remove all inline styles and let CSS handle everything
     const navLinks = document.querySelectorAll("nav a[data-section]");
