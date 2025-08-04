@@ -1,0 +1,82 @@
+/* /css/components.css */
+/* Non-critical styles loaded asynchronously - your exact original styles */
+
+/* Additional animations and transitions */
+.carousel-slide {
+  /* Enhanced carousel animations */
+  transform: translateZ(0); /* Enable hardware acceleration */
+}
+
+/* Loading animations */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.music-embed-loading,
+.video-embed-loading {
+  animation: pulse 2s infinite;
+}
+
+/* Enhanced hover effects */
+.band-name a,
+nav a {
+  transition: color 0.3s ease-in-out;
+}
+
+/* Print styles */
+@media print {
+  header,
+  .carousel-container,
+  .music-embed-loading,
+  .video-embed-loading {
+    display: none;
+  }
+
+  body {
+    background: white;
+  }
+
+  .container,
+  .text {
+    background: white;
+    box-shadow: none;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .carousel-slide {
+    transition: none;
+  }
+
+  .music-embed-loading,
+  .video-embed-loading {
+    animation: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .text {
+    border: 2px solid black;
+  }
+
+  .music-embed-loading,
+  .video-embed-loading {
+    border: 2px solid white;
+  }
+}
+
+/* Focus styles for accessibility */
+.video-embed-loading:focus,
+nav a:focus,
+.band-name a:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}

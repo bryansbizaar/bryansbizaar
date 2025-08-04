@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music - Bryan Owens</title>
+    <meta
+      name="description"
+      content="Professional multi-instrumentalist from USA - New Zealand. Guitar, mandolin, fiddle, octave mandolin, Irish bouzouki."
+    />
+    <meta
+      name="keywords"
+      content="musician, multi-instrumentalist, guitar, mandolin, octave mandolin, bouzouki, fiddle, New Zealand, Bryan Owens, celtic, rock, folk, world music, acoustic, electric, performer, teacher, recording artist, accompanist"
+    />
+    <meta name="author" content="Bryan Owens" />
+    <meta
+      property="og:title"
+      content="Music - Bryan Owens - Multi-instrumentalist"
+    />
+    <meta
+      property="og:description"
+      content="Professional multi-instrumentalist from USA - New Zealand. Guitar, mandolin, fiddle, octave mandolin and more."
+    />
+    <meta property="og:image" content="../pics/wedding3.jpg" />
+    <meta property="og:url" content="https://bryanowensmusic.com/music" />
+    <meta property="og:type" content="website" />
+
+    <!-- SHARED critical CSS - cached across all pages -->
+    <link rel="stylesheet" href="css/shared-critical.css" />
+
+    <!-- PAGE-SPECIFIC critical CSS - inline for instant rendering -->
+    <style>
+      /* Music page specific above-the-fold styles */
+      .groupcontainer {
+        margin: 1rem 1rem 3rem;
+      }
+
+      .container {
+        background: rgb(226, 230, 230);
+        border-radius: 0.5rem;
+        box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.15);
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .text {
+        font-family: "Lora", serif;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        padding: 1rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      .band-name {
+        font-family: "Lora", serif;
+        font-size: 2rem;
+      }
+
+      .band-name a {
+        color: black;
+      }
+
+      .band-name a:hover {
+        color: rgb(128, 128, 128);
+      }
+
+      .grid-wrapper {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+      }
+
+      .grid-container {
+        width: 100%;
+        background: rgb(37, 40, 46);
+        border-radius: 0.35rem;
+        padding: 1rem;
+      }
+
+      .thumbnail img {
+        border-radius: 0.35rem;
+        margin-bottom: 1rem;
+        background: rgb(37, 40, 46);
+        width: 100%;
+      }
+
+      iframe {
+        height: 400px;
+        width: 100%;
+      }
+
+      /* Loading states for lazy-loaded content */
+      .music-embed-loading {
+        height: 400px;
+        background: rgb(37, 40, 46);
+        border-radius: 0.35rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-family: "Macondo", cursive;
+      }
+
+      /* Music page specific responsive styles */
+      @media screen and (min-width: 48rem) {
+        .music-container {
+          padding: 1rem 2rem 0;
+        }
+
+        .grid-container {
+          display: grid;
+          background: rgb(37, 40, 46);
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+          border-radius: 0.5rem;
+        }
+
+        .grid-wrapper {
+          width: 100%;
+          max-width: 48rem;
+        }
+
+        .thumbnail img {
+          margin: 0;
+        }
+
+        iframe {
+          height: 98.5%;
+        }
+
+        .spotify {
+          height: 400px;
+        }
+      }
+
+      @media screen and (min-width: 52rem) {
+        .music-container {
+          margin: 2rem;
+        }
+
+        .container {
+          margin: 0 auto;
+          max-width: 65rem;
+        }
+      }
+    </style>
+
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Macondo&family=Lora&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Preload shared modules -->
+    <link rel="modulepreload" href="../js/components/header.js" />
+    <link rel="modulepreload" href="../js/components/carousel.js" />
+    <link rel="modulepreload" href="../js/components/lazy-media.js" />
+  </head>
+  <body>
+    <!-- Header populated by shared component -->
+    <header id="main-header"></header>
+
+    <!-- Carousel populated by shared component -->
+    <div id="carousel-container"></div>
+
+    <!-- Your exact content structure preserved -->
+    <div class="groupcontainer">
+      <div class="music-container">
+        <div class="container">
+          <div class="text-container text">
+            <p>
+              <span class="band-name">Bryan's Bizaar</span> - Acoustic Music
+              From Near and Far is a collection of folk melodies from around the
+              world and was recorded in New Zealand. It features me on acoustic
+              guitar/octave mandolin/clarinet, Patrick Riddett on wooden
+              flute/whistles/button accordion, and Adrian Studer on violin.
+            </p>
+          </div>
+          <div class="grid-wrapper">
+            <div class="grid-container">
+              <div class="thumbnail">
+                <img src="../pics/bryansbizaar.jpg" alt="Bryan's Bizaar" />
+              </div>
+              <div
+                class="music-embed-loading"
+                data-embed-type="soundcloud"
+                data-embed-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/194403433&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+              >
+                Loading SoundCloud Player...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="music-container">
+        <div class="container">
+          <div class="text-container text">
+            <p>
+              <span class="band-name">
+                <a href="http://ninalanemusic.com" target="_blank">Nina Lane</a>
+              </span>
+              and I met in Golden Bay, NZ and have been performing and recording
+              together ever since. As well as co-production and various
+              songwriting credits, I play acoustic/electric guitar, octave
+              mandolin and do some backing vocals.
+            </p>
+          </div>
+          <div class="grid-wrapper">
+            <div class="grid-container">
+              <div class="thumbnail">
+                <img src="../pics/htf.jpg" alt="Holding The Flame" />
+              </div>
+              <div
+                class="music-embed-loading"
+                data-embed-type="bandcamp"
+                data-embed-src="https://bandcamp.com/EmbeddedPlayer/album=1669531532/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/"
+              >
+                Loading Bandcamp Player...
+              </div>
+            </div>
+          </div>
+          <div class="grid-wrapper">
+            <div class="grid-container">
+              <div class="thumbnail">
+                <img src="../pics/ninalane.jpg" alt="Nina Lane" />
+              </div>
+              <div
+                class="music-embed-loading"
+                data-embed-type="bandcamp"
+                data-embed-src="https://bandcamp.com/EmbeddedPlayer/album=3307999248/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/"
+              >
+                Loading Bandcamp Player...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="music-container">
+        <div class="container">
+          <div class="text-container text">
+            <p>
+              <span class="band-name">
+                <a href="https://www.facebook.com/sprygg.band" target="_blank"
+                  >Sprygg</a
+                >
+              </span>
+              was a folk and trad-music inspired collaboration between two
+              performing musical and life partners, featuring me on the
+              mandolin, octave mandolin, backing vocals, guitar and clarinet.
+              The other members included Nina Lane, Dan Compton and Fran Slefer.
+            </p>
+          </div>
+          <div class="grid-wrapper">
+            <div
+              class="music-embed-loading"
+              data-embed-type="spotify"
+              data-embed-src="https://open.spotify.com/embed/album/2RrLet7qvJrIMgfvJKgjbb?utm_source=generator"
+            >
+              Loading Spotify Player...
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="music-container">
+        <div class="container">
+          <div class="text-container text">
+            <p>
+              <span class="band-name">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100063703593953"
+                  target="_blank"
+                  >King Black Acid</a
+                >
+              </span>
+              is an original rock band based in Portland, OR. I played lead
+              guitar with them from 2016-2020 and feature on several tracks
+              including the following:
+            </p>
+          </div>
+          <div class="grid-wrapper">
+            <div
+              class="music-embed-loading"
+              data-embed-type="spotify"
+              data-embed-src="https://open.spotify.com/embed/playlist/5nQRHkMK1PPilv53EcvqBr?utm_source=generator"
+            >
+              Loading Spotify Player...
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="music-container">
+        <div class="container">
+          <div class="text-container text">
+            <p>
+              <span class="band-name">Heathen Collective</span> was an
+              improvisational project active in the early 2000s in Portland, OR.
+              It consisted of me on octave mandolin, Erica Pedro on guitar and
+              vocals, and Peter Jones on percussion. Most of these songs were
+              birthed during live improv jams and were loosely developed into
+              complete songs. This recording only captured a moment in time as
+              the songs changed and morphed every time they were played.
+            </p>
+          </div>
+          <div class="grid-wrapper">
+            <div class="grid-container">
+              <div class="thumbnail">
+                <img src="../pics/om2.jpg" alt="Heathen Collective" />
+              </div>
+              <div
+                class="music-embed-loading"
+                data-embed-type="soundcloud"
+                data-embed-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/194399787&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+              >
+                Loading SoundCloud Player...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="music-container">
+        <div class="container">
+          <div class="text-container text">
+            <p>
+              <span class="band-name">
+                <a href="http://www.kendalin.com/" target="_blank">Kendálin</a>
+              </span>
+              was an eclectic folk-fusion ensemble based in Portland, OR that
+              featured me on guitar, octave mandolin and fiddle.
+            </p>
+          </div>
+          <div class="grid-wrapper">
+            <div
+              class="music-embed-loading"
+              data-embed-type="spotify"
+              data-embed-src="https://open.spotify.com/embed/album/7uT5uecsbw2cOSctNEju3z?utm_source=generator"
+            >
+              Loading Spotify Player...
+            </div>
+          </div>
+          <div class="grid-wrapper">
+            <div
+              class="music-embed-loading"
+              data-embed-type="spotify"
+              data-embed-src="https://open.spotify.com/embed/album/2FQlL2TnSmiVWG3V8N7f0M?utm_source=generator"
+            >
+              Loading Spotify Player...
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="music-container">
+        <div class="container">
+          <div class="text-container text">
+            <p>
+              <span class="band-name">Mistral</span> was a band that specialized
+              in the folk music of Brittany. We performed around the Pacific NW
+              and hosted seasonal community dances, with me on acoustic guitar
+              and octave mandolin, Ian Clemmons on vocals, fiddle, hurdy-gurdy
+              and button accordion, and Elizabeth Christina on flute, piano
+              accordion, vocals, and percussion.
+            </p>
+          </div>
+          <div class="grid-wrapper">
+            <div
+              class="music-embed-loading"
+              data-embed-type="spotify"
+              data-embed-src="https://open.spotify.com/embed/album/751jktz2GoIrR0KskxlV6g?utm_source=generator"
+            >
+              Loading Spotify Player...
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="music-container">
+        <div class="container">
+          <div class="text-container text">
+            <p>
+              <span class="band-name">The Madcap Laughs</span> was formed in
+              Boone, NC where we all attended Appalachian State University
+              together. This demo was from around 1994 and features me on
+              electric guitar, Mike Blizzard on electric guitar and lead vocals,
+              Nate Blankenship on bass and backing vocals, and Matt Blankenship
+              on drums.
+            </p>
+          </div>
+          <div class="grid-wrapper">
+            <div class="grid-container">
+              <div class="thumbnail">
+                <img src="../pics/mcl.jpg" alt="The Madcap Laughs" />
+              </div>
+              <div
+                class="music-embed-loading"
+                data-embed-type="soundcloud"
+                data-embed-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/194401821&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+              >
+                Loading SoundCloud Player...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="music-container">
+        <div class="container">
+          <div class="text-container text">
+            <p>
+              <span class="band-name">
+                <a href="https://www.cassandrarobertson.com/" target="_blank"
+                  >Cassandra Robertson</a
+                >
+              </span>
+              and I met in the Pacific NW where we ended up becoming housemates
+              during my early years in Portland, OR. I play acoustic guitar,
+              electric guitar and octave mandolin on various tracks from her
+              first three recordings.
+            </p>
+          </div>
+          <div class="grid-wrapper">
+            <div
+              class="music-embed-loading"
+              data-embed-type="spotify"
+              data-embed-src="https://open.spotify.com/embed/playlist/6WczqmKCvkyukBkFUIpHeR?utm_source=generator"
+            >
+              Loading Spotify Player...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NON-CRITICAL CSS loaded asynchronously -->
+    <link
+      rel="stylesheet"
+      href="css/components.css"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <!-- Load shared JavaScript components -->
+    <script type="module">
+      import { createHeader } from "./js/components/header.js";
+      import { createCarousel } from "./js/components/carousel.js";
+      import { initLazyMedia } from "./js/components/lazy-media.js";
+
+      // Initialize page
+      async function initMusicPage() {
+        try {
+          // Create header with current page indicator
+          const headerContainer = document.getElementById("main-header");
+          createHeader(headerContainer);
+
+          // Create carousel
+          const carouselContainer =
+            document.getElementById("carousel-container");
+          createCarousel(carouselContainer, {
+            images: [
+              "../pics/wedding3.jpg",
+              "../pics/wedding.jpg",
+              "../pics/holocene.jpg",
+              "../pics/roseland.jpg",
+              "../pics/fiddle1.jpg",
+              "../pics/shift.jpg",
+              "../pics/aunt-thelmas.jpg",
+            ],
+            interval: 9500,
+          });
+
+          // Initialize lazy loading for music embeds
+          initLazyMedia();
+        } catch (error) {
+          console.error("Error initializing music page:", error);
+        }
+      }
+
+      // Initialize when DOM is ready
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initMusicPage);
+      } else {
+        initMusicPage();
+      }
+    </script>
+  </body>
+</html>
